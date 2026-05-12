@@ -1,11 +1,18 @@
 package com.telusAssignment.rewards.service;
 
-import org.springframework.stereotype.Service;
+import com.telusAssignment.rewards.dto.RewardsResponseDto;
 
-import java.util.Map;
-
-@Service
+/**
+ * Service interface for calculating customer rewards.
+ * Defines business logic for reward calculations.
+ */
 public interface RewardService {
 
-    Map<String, Map<String, Integer>> calculateRewards();
+    /**
+     * Calculate rewards for all customers.
+     *
+     * @return RewardsResponseDto containing customer rewards and statistics
+     * @throws com.telusAssignment.rewards.exception.DatabaseException if database operation fails
+     */
+    RewardsResponseDto calculateRewards();
 }

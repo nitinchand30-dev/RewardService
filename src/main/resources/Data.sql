@@ -1,3 +1,10 @@
+CREATE TABLE IF NOT EXISTS transactions (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    customer_name VARCHAR(255) NOT NULL,
+    amount DOUBLE NOT NULL,
+    transaction_date DATE NOT NULL
+);
+
 INSERT INTO transactions (customer_name, amount, transaction_date)
 VALUES ('John', 120, '2025-01-15');
 
